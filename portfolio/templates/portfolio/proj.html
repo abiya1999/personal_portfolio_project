@@ -1,0 +1,34 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+      <div class="col mt-5 mx-5 pl-3">
+      <h2 class = "font-weight-bolder font-italic"><center>PROJECTS</center></h2>
+      <br>
+      <div class="row mx-5">
+        {% for project in courses %}
+         <div class="col-lg-4 col-sm-6">
+
+          {% if project.url %}
+
+            <a href="{{ project.url }}">
+              <b><h4>{{ project.title }}</h4></b>
+            </a>
+
+          {% else %}
+
+            <b><h4>{{ project.title }}</h4></b>
+
+          {% endif %}
+          <p class="text-sm">{{ project.description }}</p>
+
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+
+
+{% endblock %}

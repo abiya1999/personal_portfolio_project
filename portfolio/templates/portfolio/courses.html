@@ -1,0 +1,32 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+      <div class="col mt-5 mx-5 pl-3">
+      <h2 class = "font-weight-bolder font-italic"><center>COURSE CERTIFICATES</center></h2>
+      <br>
+      <div class="row mx-5">
+        {% for project in projects %}
+         <div class="col-lg-4 col-sm-6">
+
+          {% if project.url %}
+          <a href="{{ project.url }}">
+            <img src="{{ project.image.url }}" class="img-fluid sm-1">
+          </a>
+          {% else %}
+
+          <img src="{{ project.image.url }}" class="img-fluid sm-1">
+          {% endif %}
+          <h4>{{ project.title }}</h4>
+          <p class="text-sm">{{ project.description }}</p>
+
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+
+
+{% endblock %}

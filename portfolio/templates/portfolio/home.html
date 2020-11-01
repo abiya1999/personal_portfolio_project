@@ -1,0 +1,32 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<br><br>
+<div class="content-left mx-1 my-3 mt-6">
+  <div class="col-3">
+    <img src="{% static 'portfolio/mypic.png' %}" class="rounded-lg pr-5 float-left" height = "400">
+  </div>
+</div>
+
+<!--<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+  </div>
+</div>-->
+
+<br><br>
+<div class="col mt-5 mx-5 pt-6">
+  <h3><p class="text-justify text-wrap font-italic font-weight-normal" style="width: 60rem;">Highly motivated Computer Science student looking for opportunities in IT industry. A good team
+worker, with excellent communication skills wishing to put my knowledge and skills into practice to
+benefit the company and to improve myself.
+  <br><br>
+  <center><a href = '{% url 'courses' %}'><button type="button" class="btn btn-light btn-outline-dark btn-lg">Course Certificates</button></a>
+  <a href = '{% url 'proj' %}'><button type="button" class="btn btn-light btn-outline-dark btn-lg">Projects</button></a></center>
+  </p></h3>
+</div>
+
+{% endblock %}
